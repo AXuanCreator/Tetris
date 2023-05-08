@@ -1,0 +1,4 @@
+D:\SoftWare_Work\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/SoftWare_Work/JetBrains/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S D:\Files_Work\JetBrains\CLion\Project\Tetris -B D:\Files_Work\JetBrains\CLion\Project\Tetris\cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Files_Work/JetBrains/CLion/Project/Tetris/cmake-build-debug

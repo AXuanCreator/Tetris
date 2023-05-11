@@ -7,13 +7,13 @@
 class RandomGen
 {
 private:
-    std::random_device rd; // 随机数种子
-    std::mt19937 gen;
+	std::random_device rd; // 随机数种子
+	std::mt19937 gen;
 public:
-    // 使用随机设备生成高熵种子
-    RandomGen();
-    ~RandomGen();
+	// 使用随机设备生成高熵种子
+	RandomGen();
+	~RandomGen();
 
-    int blockCreatRandom(); // 生成不同形状的方块
+	int blockCreatRandom(); // 生成不同形状的方块
 };
 #endif //TETRIS_RANDOMGEN_H

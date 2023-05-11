@@ -30,3 +30,13 @@
 866	936	7055005079106128	Tetris.exe	20fcf2d5bb6a5dc9
 2	722	7055005405068446	CMakeFiles/Tetris.dir/blockgroup.cpp.obj	2eb58a3dfee2e84a
 723	790	7055005405708504	Tetris.exe	20fcf2d5bb6a5dc9
+30	843	7055140154450835	CMakeFiles/Tetris.dir/randomgen.cpp.obj	a74deab92a54c87
+12	1355	7055140159564845	CMakeFiles/Tetris.dir/consoleset.cpp.obj	fa9df70b2b9886ad
+26	1609	7055140162094415	CMakeFiles/Tetris.dir/blockgroup.cpp.obj	2eb58a3dfee2e84a
+16	1615	7055140162169891	CMakeFiles/Tetris.dir/block.cpp.obj	23d4310fc3a890c5
+4	1882	7055140164845804	CMakeFiles/Tetris.dir/windowset.cpp.obj	d0ed9b293de94a73
+9	1908	7055140165112141	CMakeFiles/Tetris.dir/main.cpp.obj	da4fd43858c1b902
+23	1925	7055140165282884	CMakeFiles/Tetris.dir/element.cpp.obj	e43a2d72ea352547
+1925	2042	7055140166423116	Tetris.exe	20fcf2d5bb6a5dc9
+2	1009	7055140436822950	CMakeFiles/Tetris.dir/block.cpp.obj	23d4310fc3a890c5
+1010	1125	7055140437934184	Tetris.exe	20fcf2d5bb6a5dc9

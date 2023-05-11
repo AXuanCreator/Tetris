@@ -8,17 +8,18 @@
 #include <iostream>
 #include <iomanip>
 
-class Element {
+class Element
+{
 private:
-    ConsoleSet consoleSet;
-    RandomGen randomGen;
+	ConsoleSet consoleSet;
+	RandomGen randomGen;
 public:
-    Element();
+	Element();
 
-    ~Element();
+	~Element();
 
-    void countDown();   // 倒计时
-    void creatBlockGroup(); // 制造1个方块组
+	void countDown();   // 倒计时
+	void creatBlockGroup(); // 制造1个方块组
 };
 
 

@@ -6,20 +6,20 @@ ConsoleSet::ConsoleSet() {
     GetCurrentConsoleFontEx(hConsole,false,&fontInfo); // 获取字体属性
     GetConsoleScreenBufferInfo(hConsole,&bufferInfo);                // 获取缓冲区属性
 
-    x = 110;
-    y = 50;
+    x = 55;
+    y = 25;
 }
 
-ConsoleSet::~ConsoleSet() {}
+ConsoleSet::~ConsoleSet() = default;
 
 
 
 
-short ConsoleSet::getX() {
+short ConsoleSet::getX() const {
     return x;
 }
 
-short ConsoleSet::getY(){
+short ConsoleSet::getY() const{
     return y;
 }
 
@@ -33,4 +33,8 @@ CONSOLE_FONT_INFOEX ConsoleSet::getFontInfo() {
 
 CONSOLE_SCREEN_BUFFER_INFO ConsoleSet::getBufferInfo() {
     return bufferInfo;
+}
+
+void ConsoleSet::setCursor(short x, short y) {
+    SetConsoleCursorPosition(hConsole, {x, y});
 }

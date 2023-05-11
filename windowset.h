@@ -2,12 +2,18 @@
 #define _WINDOW_H
 #include <windows.h>
 #include <iostream>
+
 #include "consoleset.h"
+#include "interactive.h"
+#include "element.h"
+
 // 设置控制台窗口属性
 class WindowSet
 {
 private:
-    ConsoleSet consoleSet;
+    ConsoleSet consoleSet;  // 控制台实例
+    Interactive iA;         // 交互实例
+    Element eM;
 public:
     WindowSet();
     ~WindowSet();
@@ -17,9 +23,9 @@ public:
     void setFontBig();          // 设置字体更大
     void setFontSmall();        // 设置字体更小
     void setMainTittle();       // 设置主标题
-    void setCursor(short x , short y);           // 设置光标位置
-    void hideCursor();          // 隐藏光标
 
+    void hideCursor();          // 隐藏光标
+    void drawBoard();           // 界面
 };
 
 #endif

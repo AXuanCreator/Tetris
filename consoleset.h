@@ -4,6 +4,12 @@
 #include <windows.h>
 //控制台的相关函数
 
+struct Point
+{
+    short x;
+    short y;
+};
+
 class ConsoleSet {
 private:
     HANDLE hConsole;    // 句柄
@@ -16,11 +22,12 @@ public:
 
     ~ConsoleSet();
 
-    short getX();       // return x
-    short getY();       // return y
+    short getX() const;       // return x
+    short getY() const;       // return y
     HANDLE getHandle(); // return hConsole
     CONSOLE_FONT_INFOEX getFontInfo(); // return fontInfo
     CONSOLE_SCREEN_BUFFER_INFO getBufferInfo(); //return bufferInfo;
+    void setCursor(short x , short y);           // 设置光标位置
 };
 
 #endif //TETRIS_CONSOLESET_H

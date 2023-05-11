@@ -55,7 +55,11 @@
 				0,
 				2,
 				3,
-				5
+				5,
+				7,
+				9,
+				11,
+				13
 			]
 		}
 	],
@@ -95,7 +99,11 @@
 				0,
 				2,
 				3,
-				5
+				5,
+				7,
+				9,
+				11,
+				13
 			]
 		},
 		{
@@ -104,7 +112,11 @@
 			[
 				1,
 				4,
-				6
+				6,
+				8,
+				10,
+				12,
+				14
 			]
 		}
 	],
@@ -147,6 +159,50 @@
 		{
 			"backtrace" : 1,
 			"path" : "consoleset.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "element.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "element.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "block.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "block.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "blockgroup.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "blockgroup.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "randomgen.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "randomgen.h",
 			"sourceGroupIndex" : 1
 		}
 	],

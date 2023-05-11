@@ -1,7 +1,7 @@
 #include "windowset.h"
 
+
 WindowSet::WindowSet() {
-    ConsoleSet consoleSet;
 }
 
 WindowSet::~WindowSet() {
@@ -46,9 +46,7 @@ void WindowSet::setFontSmall() {
     SetCurrentConsoleFontEx(consoleSet.getHandle(), false, &fI);
 }
 
-void WindowSet::setCursor(short x, short y) {
-    SetConsoleCursorPosition(consoleSet.getHandle(), {x, y});
-}
+
 
 void WindowSet::hideCursor() {
     //获取并设置光标隐藏
@@ -65,13 +63,44 @@ void WindowSet::setMainTittle() {
 
     short cWidth = bI.srWindow.Right - bI.srWindow.Left + 1;  // 长度
     short cHeight = bI.srWindow.Bottom - bI.srWindow.Top + 1; // 高度
-    short x = (cWidth - 65) / 2;
+    short x = (cWidth - 70) / 2;
     short y = (cHeight - 10) / 2;
 
-    setCursor(x, y);
+    consoleSet.setCursor(x, y);
     std::cout << "Tetris";
 
-    setCursor(x - 10, y + 2);
-    setFontSmall();
+    consoleSet.setCursor(x - 10, y + 2);
     std::cout << "Press Any Key To Start Game!";
+
+    iA.cleanScreen(); // 按任意键清屏
+}
+
+void WindowSet::drawBoard() {
+    // 框
+    for(int i=0;i<26;++i)
+    {
+        consoleSet.setCursor(0,i);
+
+        if(i==0||i==25)
+        {
+            for(int j=0;j<55;++j)
+            {
+                std::cout << "-";
+            }
+        }
+        else {
+            std::cout << "|";
+            consoleSet.setCursor(38, i);
+            std::cout << "|";
+            consoleSet.setCursor(54, i);
+            std::cout << "|";
+        }
+    }
+
+    // 倒计时
+    consoleSet.setCursor(44,2);
+    std::cout << "TIME";
+    //eM.countDown(); // 存在
+
+
 }

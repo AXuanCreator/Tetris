@@ -2,6 +2,7 @@
 
 Block::Block()
 {
+
 }
 
 Block::~Block()
@@ -18,19 +19,25 @@ void Block::printBlock()
 {
 
 	consoleSet.setCursor(point.x, point.y); // 设置光标坐标
-	std::cout << "0";                       // 输出
+	std::cout << "*";                       // 输出
 }
 
-void Block::changeBlockX(int m)
+void Block::changeBlockX(short m)
 {
-	if (checkBlock(point.x + m, point.y))
-		point.x += m; // 测试：-1
+	if(map.checkMap(point.x+m,point.y))
+		point.x+=m;
 }
 
-void Block::changeBlockY(int m)
+void Block::changeBlockY(short m)
 {
-	if (checkBlock(point.x, point.y + m))
-		point.y += m;
+	if(map.checkMap(point.x,point.y+m))
+		point.y+=m;
+}
+
+void Block::changeBlockXY(short _x, short _y)
+{
+		point.x = _x;
+		point.y = _y;
 }
 
 short Block::getBlockX() const
@@ -49,12 +56,11 @@ void Block::cleanBlock()
 	std::cout << " ";
 }
 
-bool Block::checkBlock(int x, int y)
+bool Block::checkBlock(short _x,short _y)
 {
-	// 框的移动范围是 : X->[1~37] Y->[1~24]。但会发生改变，因此不能直接使用数字，可以使用两个坐标
-	Point tempP = consoleSet.getRange();
-	if (x < 1 || x > tempP.x || y < 1 || y > tempP.y)
+	if(map.checkMap(_x,_y))
+		return true;
 
-		return false;
-	return true;
+	return false;
 }
+

@@ -4,22 +4,21 @@
 
 #include "consoleset.h" // 控制台信息
 #include "blockgroup.h" // 方块组
-#include "randomgen.h"  // 随机数生成
 #include <iostream>
 #include <iomanip>
+#include <conio.h>
 
 class Element
 {
 private:
 	ConsoleSet consoleSet;
-	RandomGen randomGen;
 public:
 	Element();
 
 	~Element();
 
 	void countDown();   // 倒计时
-	void creatBlockGroup(); // 制造1个方块组
+
 };
 
 

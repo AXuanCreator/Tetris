@@ -12,7 +12,7 @@ RandomGen::~RandomGen() = default;
 
 int RandomGen::blockCreatRandom(){
 
-    std::uniform_int_distribution<> dis(1,4);
+    std::uniform_int_distribution<> dis(1,5);
     return dis(gen);
 }
 

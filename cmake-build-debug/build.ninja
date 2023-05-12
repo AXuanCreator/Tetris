@@ -97,6 +97,12 @@ build CMakeFiles/Tetris.dir/randomgen.cpp.obj: CXX_COMPILER__Tetris_Debug D$:/Fi
   OBJECT_DIR = CMakeFiles\Tetris.dir
   OBJECT_FILE_DIR = CMakeFiles\Tetris.dir
 
+build CMakeFiles/Tetris.dir/map.cpp.obj: CXX_COMPILER__Tetris_Debug D$:/Files_Work/JetBrains/CLion/Project/Tetris/map.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\map.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Tetris
@@ -105,7 +111,7 @@ build CMakeFiles/Tetris.dir/randomgen.cpp.obj: CXX_COMPILER__Tetris_Debug D$:/Fi
 #############################################
 # Link the executable Tetris.exe
 
-build Tetris.exe: CXX_EXECUTABLE_LINKER__Tetris_Debug CMakeFiles/Tetris.dir/main.cpp.obj CMakeFiles/Tetris.dir/windowset.cpp.obj CMakeFiles/Tetris.dir/interactive.cpp.obj CMakeFiles/Tetris.dir/consoleset.cpp.obj CMakeFiles/Tetris.dir/element.cpp.obj CMakeFiles/Tetris.dir/block.cpp.obj CMakeFiles/Tetris.dir/blockgroup.cpp.obj CMakeFiles/Tetris.dir/randomgen.cpp.obj
+build Tetris.exe: CXX_EXECUTABLE_LINKER__Tetris_Debug CMakeFiles/Tetris.dir/main.cpp.obj CMakeFiles/Tetris.dir/windowset.cpp.obj CMakeFiles/Tetris.dir/interactive.cpp.obj CMakeFiles/Tetris.dir/consoleset.cpp.obj CMakeFiles/Tetris.dir/element.cpp.obj CMakeFiles/Tetris.dir/block.cpp.obj CMakeFiles/Tetris.dir/blockgroup.cpp.obj CMakeFiles/Tetris.dir/randomgen.cpp.obj CMakeFiles/Tetris.dir/map.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Tetris.dir

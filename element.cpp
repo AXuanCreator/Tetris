@@ -6,9 +6,7 @@ Element::Element()
 }
 
 Element::~Element()
-{
-
-}
+= default;
 
 void Element::countDown()
 {
@@ -22,12 +20,3 @@ void Element::countDown()
 	}
 }
 
-void Element::creatBlockGroup()
-{
-	BlockGroup bg(randomGen.blockCreatRandom());
-
-	// 暂时放在这
-	bg.printBlockGroup();
-	bg.blockMove();
-
-}

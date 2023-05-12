@@ -2,30 +2,45 @@
 #define TETRIS_BLOCKGROUP_H
 
 #include "block.h"
+#include "map.h"
 #include <conio.h>
 #include <iostream>
+#include <ctime>
 
+#define BX1 block[1].getBlockX()
+#define BX2 block[2].getBlockX()
+#define BX3 block[3].getBlockX()
+#define BX0 block[0].getBlockX()
+#define BY1 block[1].getBlockY()
+#define BY2 block[2].getBlockY()
+#define BY3 block[3].getBlockY()
+#define BY0 block[0].getBlockY()
+#define B1 block[1]
+#define B2 block[2]
+#define B3 block[3]
+#define B0 block[0]
 
-struct MoveCheck
-{
-	short left;
-	short right;
-	short down;
-};
 class BlockGroup
 {
 private:
-	Block block[4]; // 四个方块组成一个图形
-	MoveCheck moveCheck; // 控制移动时的判定
+	Block block[4];         // 四个方块组成一个图形
+	Map map;                // 地图
+	int sign;               // 特征值，不同值代表着不同形状，原值有4个
 
 public:
 	BlockGroup();
-	BlockGroup(int val); // 用于生成四种不同的形状
+	BlockGroup(int val);    // 用于生成四种不同的形状
 	~BlockGroup();
 
-	void blockMove();             // 方块运动
-	void printBlockGroup() const; // 打印方块组
-	MoveCheck checkBlockGroup() const; // 用于判定哪一个方块是移动时判定的关键
+	void blockMove(char ch);                // 方块运动
+	void blockRotate(char ch);
+	void changeBlockGroup();                // 更改方块类型
+	void blockSign(short x0,short y0,short x1,short y1,short x2,short y2,short x3,short y3);                       // 方块类型
+	void printBlockGroup() const;           // 打印方块组
+	bool checkBlockBottom(bool sw, short _x, short _y);                // 检测是否抵达相对底部
+	void checkRowFull();                    // 检查行是否已满
+	void getAction(char& ch);               // 方块
+
 };
 
 #endif //TETRIS_BLOCKGROUP_H

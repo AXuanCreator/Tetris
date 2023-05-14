@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.25"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "Release",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Tetris::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Tetris-Debug-e6777c34b837fe59abfe.json",
+					"jsonFile" : "target-Tetris-Release-3934a005a139d777a78f.json",
 					"name" : "Tetris",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Files_Work/JetBrains/CLion/Project/Tetris/cmake-build-debug",
+		"build" : "D:/Files_Work/JetBrains/CLion/Project/Tetris/cmake-build-release",
 		"source" : "D:/Files_Work/JetBrains/CLion/Project/Tetris"
 	},
 	"version" : 

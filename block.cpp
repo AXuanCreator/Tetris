@@ -1,13 +1,10 @@
 #include "block.h"
 
 Block::Block()
-{
-
-}
+= default;
 
 Block::~Block()
-{
-}
+= default;
 
 void Block::creatBlock(short _x, short _y)
 {
@@ -22,22 +19,28 @@ void Block::printBlock()
 	std::cout << "*";                       // 输出
 }
 
+void Block::printBlock(short x, short y)
+{
+	consoleSet.setCursor(static_cast<short>(point.x + x), static_cast<short>(point.y + y));
+	std::cout << "*";
+}
+
 void Block::changeBlockX(short m)
 {
-	if(map.checkMap(point.x+m,point.y))
-		point.x+=m;
+	if (map.checkMap(static_cast<short>(point.x + m), point.y))
+		point.x = static_cast<short>(point.x + m);
 }
 
 void Block::changeBlockY(short m)
 {
-	if(map.checkMap(point.x,point.y+m))
-		point.y+=m;
+	if (map.checkMap(point.x, static_cast<short>(point.y + m)))
+		point.y = static_cast<short>(point.y + m);
 }
 
 void Block::changeBlockXY(short _x, short _y)
 {
-		point.x = _x;
-		point.y = _y;
+	point.x = _x;
+	point.y = _y;
 }
 
 short Block::getBlockX() const
@@ -56,11 +59,18 @@ void Block::cleanBlock()
 	std::cout << " ";
 }
 
-bool Block::checkBlock(short _x,short _y)
+void Block::cleanBlock(short x, short y)
 {
-	if(map.checkMap(_x,_y))
+	consoleSet.setCursor(static_cast<short>(point.x + x), static_cast<short>(point.y + y));
+	std::cout << " ";
+}
+
+bool Block::checkBlock(short _x, short _y)
+{
+	if (map.checkMap(_x, _y))
 		return true;
 
 	return false;
 }
+
 

@@ -1,37 +1,37 @@
+#pragma once
+
 #ifndef TETRIS_CONSOLESET_H
 #define TETRIS_CONSOLESET_H
 
 #include <windows.h>
 //控制台的相关函数
 
+// 点坐标
 struct Point
 {
-    short x;
-    short y;
+	short x;
+	short y;
 };
 
-class ConsoleSet {
+class ConsoleSet
+{
 private:
-    HANDLE hConsole;    // 句柄
-    CONSOLE_FONT_INFOEX fontInfo;  // 字体信息
-    CONSOLE_SCREEN_BUFFER_INFO bufferInfo; // 缓冲区信息
-
-    short x;            // 窗口右下角x坐标
-    short y;            // 窗口右小角y坐标
-
+	HANDLE hConsole;                        // 句柄
+	CONSOLE_FONT_INFOEX fontInfo{};           // 字体信息
+	CONSOLE_SCREEN_BUFFER_INFO bufferInfo{};  // 缓冲区信息
+	Point windowPoint{};                      // 窗口坐标
 
 public:
-    ConsoleSet();
+	ConsoleSet();
 
-    ~ConsoleSet();
+	~ConsoleSet();
 
-    short getX() const;       // return x
-    short getY() const;       // return y
-    HANDLE getHandle(); // return hConsole
-    CONSOLE_FONT_INFOEX getFontInfo(); // return fontInfo
-    CONSOLE_SCREEN_BUFFER_INFO getBufferInfo(); //return bufferInfo;
-    void setCursor(short x , short y);           // 设置光标位置
-	void changeMoveRange(short x , short y);                      // 改变可移动范围
+	[[nodiscard]] short getX() const;                                       // return x
+	[[nodiscard]] short getY() const;                                       // return y
+	[[nodiscard]]HANDLE getHandle() const;                                  // return hConsole
+	[[nodiscard]]CONSOLE_FONT_INFOEX getFontInfo() const;                   // return fontInfo
+	[[nodiscard]]CONSOLE_SCREEN_BUFFER_INFO getBufferInfo() const;          //return bufferInfo;
+	void setCursor(short x, short y);                                       // 设置光标位置
 };
 
 #endif //TETRIS_CONSOLESET_H

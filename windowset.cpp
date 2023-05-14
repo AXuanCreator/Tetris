@@ -2,12 +2,10 @@
 
 
 WindowSet::WindowSet()
-{
-}
+= default;
 
 WindowSet::~WindowSet()
-{
-}
+= default;
 
 void WindowSet::setSize()
 {
@@ -106,10 +104,11 @@ void WindowSet::drawBoard()
 		}
 	}
 
-	// 倒计时
+	// 分数
 	consoleSet.setCursor(44, 2);
-	std::cout << "TIME";
-	//eM.countDown(); // 存在
+	std::cout << "SCORE";
 
-
+	// 下一个图案
+	consoleSet.setCursor(43, 17);
+	std::cout << " NEXT";
 }

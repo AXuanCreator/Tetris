@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef TETRIS_RANDOMGEN_H
 #define TETRIS_RANDOMGEN_H
 
@@ -7,8 +9,8 @@
 class RandomGen
 {
 private:
-	std::random_device rd; // 随机数种子
-	std::mt19937 gen;
+	std::random_device rd;  // 随机数种子
+	std::mt19937 gen;       // 随机数引擎
 public:
 	// 使用随机设备生成高熵种子
 	RandomGen();

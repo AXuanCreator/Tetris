@@ -1,14 +1,11 @@
+
 #include "map.h"
 
 Map::Map()
-{
-
-}
+= default;
 
 Map::~Map()
-{
-
-}
+= default;
 
 void Map::mapInit()
 {
@@ -29,18 +26,12 @@ void Map::mapInit()
 		i[38] = 0;
 	}
 
-	// 临时放这
-	for(auto& i : rowFull)
+	// 将rowFull初始化为0
+	for (auto& i : rowFull)
 		i = 0;
-	/*for(auto& row : myMap)
-	{
-		for(auto& col : row)
-		{
-			std::cout<<col;
-		}
-		std::cout<<std::endl;
-	}*/
+
 }
+
 bool Map::checkMap(short x, short y) const
 {
 	if (myMap[y][x])  // 空区域
@@ -48,30 +39,32 @@ bool Map::checkMap(short x, short y) const
 
 	return false;
 }
-void Map::mapChange(short x, short y,bool bl)
+
+void Map::mapChange(short x, short y, bool bl)
 {
-	if(bl)
+	if (bl)
 	{
 		myMap[y][x] = 1; // 可移动区域
 	}
-    else
+	else
 	{
 		myMap[y][x] = 0; // 变为墙
 	}
 
 }
+
 void Map::printMap() const
 {
-	for(auto&row : myMap)
+	for (auto& row : myMap)
 	{
-		for(auto&col:row)
+		for (auto& col : row)
 		{
-			std::cout<<col;
+			std::cout << col;
 		}
-		std::cout<<std::endl;
+		std::cout << std::endl;
 	}
-
 }
+
 void Map::rowAdd(short r)
 {
 	++rowFull[r];
@@ -80,41 +73,57 @@ void Map::rowAdd(short r)
 	//consoleSet.setCursor(45,3);
 	//std::cout<<r<<"  "<<rowFull[24];
 }
+
 void Map::rowDele(short r)
 {
-	if(rowFull[r]==37)
+	if (rowFull[r] == 37)
 	{
 		rowFull[r] = 0; // 清空
-		for(int i=r;i>1;--i)
+		scores += 10;     // 加分
+		for (int i = r; i > 1; --i)
 		{
-			for(int j=1;j<38;++j)
+			for (int j = 1; j < 38; ++j)
 			{
-				myMap[i][j]=myMap[i-1][j]; // 不断继承上一层的答案
+				myMap[i][j] = myMap[i - 1][j]; // 不断继承上一层的答案
 			}
-			rowFull[i] = rowFull[i-1];     // 不断继承上一层
+			rowFull[i] = rowFull[i - 1];     // 不断继承上一层
 		}
-
-		refreshMap(r);
+		refreshScore();     // 刷新分数
+		refreshMap(r);      // 刷新地图
 	}
 
-
 }
+
 void Map::refreshMap(short r)
 {
-	for(int i=1;i<=r;++i)
+	for (int i = 1; i <= r; ++i)
 	{
-		for(int j=1;j<38;++j)
+		for (int j = 1; j < 38; ++j)
 		{
-			if(myMap[i][j]==0)
+			if (myMap[i][j] == 0)
 			{
-				consoleSet.setCursor(j,i); //x-y 和 i-j 是相反的
+				consoleSet.setCursor(j, i); //x-y 和 i-j 是相反的
 				std::cout << '*';
 			}
 			else
 			{
-				consoleSet.setCursor(j,i); //x-y 和 i-j 是相反的
+				consoleSet.setCursor(j, i); //x-y 和 i-j 是相反的
 				std::cout << ' ';
 			}
 		}
 	}
+}
+
+bool Map::rowDead()
+{
+	if (rowFull[1] > 0)    // 如果首行有方块，则代表死亡
+		return true;
+
+	return false;
+}
+
+void Map::refreshScore()
+{
+	consoleSet.setCursor(44, 3);
+	std::cout << std::setw(4) << std::setfill('0') << scores;
 }

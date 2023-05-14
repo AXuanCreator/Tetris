@@ -1,0 +1,20 @@
+# ninja log v5
+10	474	7057382151750654	CMakeFiles/Tetris.dir/randomgen.cpp.obj	184090db8c544bb9
+8	858	7057382155592519	CMakeFiles/Tetris.dir/consoleset.cpp.obj	db9858c1dbd6aa3a
+4	1031	7057382157323618	CMakeFiles/Tetris.dir/block.cpp.obj	9fd2ba5587014e2d
+11	1040	7057382157419789	CMakeFiles/Tetris.dir/map.cpp.obj	ab3c42c1ac3ece76
+7	1156	7057382158566430	CMakeFiles/Tetris.dir/blockgroup.cpp.obj	614213b5c7274e24
+1	1226	7057382159281617	CMakeFiles/Tetris.dir/main.cpp.obj	a4bebf5e8609efeb
+3	1253	7057382159548858	CMakeFiles/Tetris.dir/windowset.cpp.obj	a3bb85f89710d11a
+6	1285	7057382159873108	CMakeFiles/Tetris.dir/interactive.cpp.obj	37f89d956ad4e16f
+1285	1369	7057382160644362	Tetris.exe	df2f76ab04fdd6a0
+4	1137	7057383253129676	CMakeFiles/Tetris.dir/blockgroup.cpp.obj	614213b5c7274e24
+2	1214	7057383253905692	CMakeFiles/Tetris.dir/interactive.cpp.obj	37f89d956ad4e16f
+1214	1288	7057383254603708	Tetris.exe	df2f76ab04fdd6a0
+7	1134	7057383324435974	CMakeFiles/Tetris.dir/block.cpp.obj	9fd2ba5587014e2d
+10	1239	7057383325538997	CMakeFiles/Tetris.dir/map.cpp.obj	ab3c42c1ac3ece76
+5	1279	7057383325941453	CMakeFiles/Tetris.dir/blockgroup.cpp.obj	614213b5c7274e24
+4	1359	7057383326743599	CMakeFiles/Tetris.dir/windowset.cpp.obj	a3bb85f89710d11a
+1	1410	7057383327253113	CMakeFiles/Tetris.dir/main.cpp.obj	a4bebf5e8609efeb
+9	1410	7057383327263113	CMakeFiles/Tetris.dir/interactive.cpp.obj	37f89d956ad4e16f
+1411	1497	7057383328084450	Tetris.exe	df2f76ab04fdd6a0
